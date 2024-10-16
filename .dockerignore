@@ -1,7 +1,4 @@
-*.pem
-*.key
 *.jwt
 *.jws
-config
 .git
 .github

@@ -8,7 +8,6 @@ RUN go mod download
 COPY . .
 
 RUN mkdir build
-RUN ls -la
 COPY ./config/ ./build/
 RUN go build -o ./build ./...
 
