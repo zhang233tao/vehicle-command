@@ -15,4 +15,5 @@ FROM gcr.io/distroless/base-debian12 AS runtime
 
 COPY --from=build /app/build /usr/local/bin
 
+EXPOSE 4443
 ENTRYPOINT ["tesla-http-proxy"]
