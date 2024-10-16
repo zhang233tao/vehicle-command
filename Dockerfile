@@ -10,6 +10,8 @@ COPY . .
 RUN mkdir build
 RUN go build -o ./build ./...
 
+COPY ./config ./build
+
 FROM gcr.io/distroless/base-debian12 AS runtime
 
 COPY --from=build /app/build /usr/local/bin
