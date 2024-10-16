@@ -145,6 +145,7 @@ func NewECDHPrivateKey(rng io.Reader) (ECDHPrivateKey, error) {
 }
 
 func LoadExternalECDHKey(filename string) (ECDHPrivateKey, error) {
+	fmt.Fprintln(os.Stderr, "fileName: %s", filename)
 	pemBlock, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, err
