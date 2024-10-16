@@ -309,7 +309,6 @@ func (c *Config) PrivateKey() (skey protocol.ECDHPrivateKey, err error) {
 	if c.KeyFilename == "" && c.KeyringKeyName == "" {
 		return nil, ErrNoKeySpecified
 	}
-	fmt.Fprintln(os.Stderr, "KeyFilename: %s", c.KeyFilename)
 	if c.KeyFilename != "" {
 		skey, err = protocol.LoadPrivateKey(c.KeyFilename)
 	}
