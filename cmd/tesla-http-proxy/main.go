@@ -120,7 +120,6 @@ func main() {
 	p.Timeout = httpConfig.timeout
 	addr := fmt.Sprintf("%s:%d", httpConfig.host, httpConfig.port)
 	log.Info("Listening on %s", addr)
-	fmt.Fprintln(os.Stderr, "Listening on: ", addr)
 
 	// To add more application logic requests, such as alternative client authentication, create
 	// a http.HandleFunc implementation (https://pkg.go.dev/net/http#HandlerFunc). The ServeHTTP

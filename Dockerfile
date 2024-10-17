@@ -1,5 +1,7 @@
 FROM golang:1.23.0 AS build
 
+ARG TESLA_VERBOSE
+
 WORKDIR /app
 
 COPY go.mod go.sum ./
